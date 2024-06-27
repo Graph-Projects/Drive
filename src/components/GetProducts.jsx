@@ -17,7 +17,6 @@ const GetProducts = () => {
   const getProducts = () => {
     axios.get("http://127.0.0.1:8000/api/v1/products").then((response) => {
       setProducts(response.data);
-      console.log(response);
     });
   };
 
@@ -42,8 +41,12 @@ const GetProducts = () => {
       return getProducts();
     }
     setProducts(
-      products.filter((product) =>
-        product.name.toLowerCase().includes(inputText)
+      products.filter(
+        (product) =>
+          product.name.toLowerCase().includes(inputText) ||
+          product.category.some((category) =>
+            category.toLowerCase().includes(inputText)
+          )
       )
     );
   };
