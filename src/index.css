@@ -32,10 +32,18 @@ a:hover {
   gap: 1em;
   justify-content: center;
 }
+/* .getProducts{
+  border: 1px solid red;
+} */
 .product{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 25%;
   height: 35vh;
+}
+.searchBar{
+  width: 300px;
+  height: 25px;
+  margin-bottom: 3em;
 }
 .category-name{
   font-size: x-small;

@@ -10,7 +10,6 @@ const Products = () => {
       <div>
         <div>
           <Navigation />
-          <SearchBar />
           <br />
           <br />
           <NavLink to={"/products/create"}>
@@ -20,7 +19,9 @@ const Products = () => {
           </NavLink>
         </div>{" "}
         <br />
-        <GetProducts />
+        <div className="getProducts">
+          <GetProducts />
+        </div>
       </div>
     </>
   );
